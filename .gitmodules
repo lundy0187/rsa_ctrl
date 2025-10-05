@@ -1,0 +1,3 @@
+[submodule "extern/socketscpi"]
+	path = extern/socketscpi
+	url = git@github.com:morgan-at-keysight/socketscpi.git
