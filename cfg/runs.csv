@@ -1,0 +1,3 @@
+FileName,CentFreq_MHz,Span_MHz,Rbw_kHz,Vbw_Hz,SwpPts,NumSwp,Mode,Trace
+Run_001,450,50,3,100,8001,50,AVER,Normal
+Run_002,1250,100,1000,30,8001,50,AVER,Normal
