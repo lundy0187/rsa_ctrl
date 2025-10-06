@@ -16,3 +16,9 @@ def make_trace(rsa, params, cmdDelay=0.05):
     rsa.write('TRAC:SPEC:MEAS:FUNC ' + params.Trace, delay=cmdDelay)
     # extract sweep time and build trace
     time.sleep(2)
+    # save trace to file
+    #print('MMEM:SPEC:MEAS:STOR:TRAC1\"' + 'C:\\Users\\Public\\Documents\\' + params.FileName + '\"')
+    rsa.write('MMEM:SPEC:MEAS:STOR:TRAC \"' + 'C:\\Users\\Public\\Documents\\' + params.FileName + '\"')
+    print(rsa.query('MMEM:SPEC:MEAS:STOR:PLOT:DON?'))
+    while not rsa.query('MMEM:SPEC:MEAS:STOR:PLOT:DON?'):
+        time.sleep(2)
